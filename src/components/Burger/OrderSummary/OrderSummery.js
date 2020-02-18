@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Auxx from '../../../hoc/Aux/Aux';
+import Auxx from '../../../hoc/Auxx/Aux';
 import Button from "../../UI/Button/Button";
 import PropTypes from 'prop-types';
 

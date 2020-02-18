@@ -3,7 +3,7 @@ import React from 'react';
 import Logo from "../../Logo/Logo";
 import NavigationItems from "../NavigationItems/NavigationItems";
 import classes from './SideDrower.module.css';
-import Auxx from "../../../hoc/Aux/Aux";
+import Auxx from "../../../hoc/Auxx/Aux";
 import Backdrop from "../../UI/Backdrop/Backdrop";
 
 const SideDrower = (props) => {

@@ -3,7 +3,7 @@ import React from 'react';
 import Logo from "../../Logo/Logo";
 import NavigationItems from "../NavigationItems/NavigationItems";
 import classes from './SideDrower.module.css';
-import Aux from "../../../hoc/Aux/Aux";
+import Auxx from "../../../hoc/Aux/Aux";
 import Backdrop from "../../UI/Backdrop/Backdrop";
 
 const SideDrower = (props) => {
@@ -12,7 +12,7 @@ const SideDrower = (props) => {
         attachedClasses= [classes.SideDrawer, classes.Open]
     }
     return (
-        <Aux>
+        <Auxx>
             <Backdrop show={props.open} clicked={props.closed}/>
             <div className={attachedClasses.join(' ')}>
                 <div className={classes.Logo}>
@@ -22,7 +22,7 @@ const SideDrower = (props) => {
                     <NavigationItems/>
                 </nav>
             </div>
-        </Aux>
+        </Auxx>
     )
 };
 

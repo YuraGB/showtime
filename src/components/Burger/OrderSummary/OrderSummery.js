@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Aux from '../../../hoc/Aux/Aux';
+import Auxx from '../../../hoc/Aux/Aux';
 import Button from "../../UI/Button/Button";
 import PropTypes from 'prop-types';
 
@@ -15,7 +15,7 @@ const orderSummery = (props) => {
         });
 
     return (
-        <Aux>
+        <Auxx>
             <h3>Your Order</h3>
             <p>A delicias burger with the following ingredients:</p>
             <ul>
@@ -31,7 +31,7 @@ const orderSummery = (props) => {
                 btnType='Success'
                 clicked={props.purchaseContinue}>
                 Continue</Button>
-        </Aux>
+        </Auxx>
     )
 };
 

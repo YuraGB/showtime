@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import Aux from "../Aux/Aux";
+import Auxx from "../Aux/Aux";
 import classes from './Layout.module.css';
 import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
 import SideDrower from "../../components/Navigation/SideDrower/SideDrower";
@@ -21,13 +21,13 @@ class Layout extends Component {
     render() {
         return (
 
-            <Aux>
+            <Auxx>
                 <Toolbar drawerToggleClicked={this.sideDrowerCloseHandler}/>
                 <SideDrower open={this.state.showSideDrower} closed={this.sideDrowerCloseHandler}/>
                 <main className={classes.Content}>
                     {this.props.children}
                 </main>
-            </Aux>
+            </Auxx>
         )
     }
 }

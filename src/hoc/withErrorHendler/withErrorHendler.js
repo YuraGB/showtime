@@ -1,5 +1,5 @@
 import React from 'react';
-import Auxx from "../Auxx/Aux";
+import Auxx from "../Auxx/Auxx";
 import Modal from "../../components/UI/Model/Modal";
 
 

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import Auxx from "../Auxx/Aux";
+import Auxx from "../Auxx/Auxx";
 import classes from './Layout.module.css';
 import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
 import SideDrower from "../../components/Navigation/SideDrower/SideDrower";

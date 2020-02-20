@@ -7,7 +7,7 @@ import SideDrower from "../../components/Navigation/SideDrower/SideDrower";
 
 class Layout extends Component {
     state = {
-        showSideDrower: true
+        showSideDrower: false
     };
     sideDrowerCloseHandler = () => {
         this.setState(prev => {

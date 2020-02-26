@@ -9,7 +9,7 @@ const Order = (props) => {
         ingridient.push(
             {
                 name: ingrName,
-                amount: props.price
+                amount: props.ingredients[ingrName]
             })
     };
 

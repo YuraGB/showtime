@@ -5,6 +5,7 @@ import Button from "../../UI/Button/Button";
 import PropTypes from 'prop-types';
 
 const orderSummery = (props) => {
+    console.log(props);
     const ingrSumm = Object.keys(props.ingredients)
         .map(igKey => {
             return (

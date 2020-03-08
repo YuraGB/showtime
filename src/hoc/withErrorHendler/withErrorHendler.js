@@ -11,7 +11,7 @@ const withErrorHandler = (WrapperComponent, axios) => {
             super(props);
 
             this.reqInt = axios.interceptors.request.use(null, req => {
-                console.log("here1");
+
                 this.setState({error: null});
                 return req;
             });

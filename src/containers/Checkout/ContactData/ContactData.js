@@ -34,7 +34,7 @@ class ContactData extends Component {
                     validation: {
                         required: true,
                     },
-                    valid: '',
+                    valid: 0,
                     touched: ''
                 }
             },
@@ -50,7 +50,7 @@ class ContactData extends Component {
                         maxLen: 5
                     },
                    valid: '',
-                    touched: ''
+                   touched: ''
                 }
             },
             country: {

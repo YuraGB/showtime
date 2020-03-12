@@ -7,7 +7,6 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-    console.log(action);
     switch (action.type) {
         case actyionTupes.PURCHASE_BURGAR_START: {
             return {

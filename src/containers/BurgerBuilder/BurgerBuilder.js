@@ -21,12 +21,17 @@ componentDidMount() {
 }
 
     purchaseHandler = () => {
+    if (this.props.isAuth){
         this.setState((prev, props) => {
             return {
                 ...prev,
                 purchasing: !prev.purchasing
             }
         });
+    } else {
+        this.props.onSetRedirect('/checkout');
+        this.props.history.push('/auth');
+    }
     };
 
     updatePurchase = (ingredience) => {
@@ -79,6 +84,7 @@ componentDidMount() {
                         price={this.props.price}
                         purchaseble={this.updatePurchase(this.props.ings)}
                         ordered={this.purchaseHandler}
+                        isAuth={this.props.isAuth}
                     />
                 </Auxx>
             )
@@ -102,7 +108,8 @@ const mapDispatchToProps = (dispatch) => {
         onIngredientAdded: (ingName) => dispatch( actions.addIngredient(ingName)),
         onIngredientRemoved: (ingName) => dispatch( actions.rmvIngredient(ingName)),
         onInitIngr: () => dispatch(actions.initIngredients()),
-        onInitPurchase: () => dispatch(actions.purchaseInit())
+        onInitPurchase: () => dispatch(actions.purchaseInit()),
+        onSetRedirect: (path) => dispatch(actions.setAuthRedirect(path))
     }
 };
 
@@ -110,7 +117,8 @@ const mapStateToProps = (state) => {
     return {
         ings: state.burgerBuilder.ingredients,
         price: state.burgerBuilder.totalPrice,
-        error: state.burgerBuilder.error
+        error: state.burgerBuilder.error,
+        isAuth: state.auth.token !== null
     }
 };
 

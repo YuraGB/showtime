@@ -37,6 +37,13 @@ export const checkAuthTimeout = (experationTime) => {
         };
 };
 
+export const setAuthRedirect = path => {
+    return {
+        type: actionTypes.AUTH_SET_PATH_REDIRECT,
+        path: path
+    }
+};
+
 export const  auth = (email, password, isSignUp) => dispatch => {
     dispatch(authStart());
     const authData = {

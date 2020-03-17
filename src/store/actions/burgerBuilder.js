@@ -16,6 +16,7 @@ export const rmvIngredient = (name) => {
 };
 
 export const setIngredients = (ingr) => {
+    console.log(ingr);
   return {
       type: actionTypes.SET_INGREDIENTS,
       ingredients: ingr

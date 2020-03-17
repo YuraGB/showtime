@@ -16,11 +16,12 @@ class BurgerBuilder extends Component {
         purchasing: false
     };
 
-componentDidMount() {
-    this.props.onInitIngr();
-}
+    componentDidMount() {
+        this.props.onInitIngr();
+    }
 
     purchaseHandler = () => {
+        console.log('sss');
     if (this.props.isAuth){
         this.setState((prev, props) => {
             return {
@@ -29,6 +30,7 @@ componentDidMount() {
             }
         });
     } else {
+        console.log('sss123');
         this.props.onSetRedirect('/checkout');
         this.props.history.push('/auth');
     }

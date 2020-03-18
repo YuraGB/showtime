@@ -16,7 +16,6 @@ export const  authSuccess = (token, userId) => {
 };
 
 export const  authError = (error) => {
-    console.log(error);
     return {
         type: actionTypes.AUTH_FAIL,
         error: error

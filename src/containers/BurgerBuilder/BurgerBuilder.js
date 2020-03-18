@@ -21,7 +21,6 @@ class BurgerBuilder extends Component {
     }
 
     purchaseHandler = () => {
-        console.log('sss');
     if (this.props.isAuth){
         this.setState((prev, props) => {
             return {
@@ -30,7 +29,6 @@ class BurgerBuilder extends Component {
             }
         });
     } else {
-        console.log('sss123');
         this.props.onSetRedirect('/checkout');
         this.props.history.push('/auth');
     }

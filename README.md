@@ -1,3 +1,12 @@
+Live 
+
+[burger-builder](https://burgerbilder-2a31b.firebaseapp.com/)
+
+Hosting on [Firebase](https://firebase.google.com/pricing?hl=ru)
+
+DB [Firebase](https://firebase.google.com/pricing?hl=ru)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -2,6 +2,7 @@ import React from 'react';
 
 import classes from './NavigationItems.module.css';
 import NavigationItem from "./NavigationItem/NavigationItem";
+import {ReactReduxContext} from "react-redux";
 
 const NavigationItems = (props) => {
     return (
@@ -9,14 +10,13 @@ const NavigationItems = (props) => {
             <NavigationItem link='/'>Burger Builder</NavigationItem>
             {
                 props.isAuth
-                    ? <NavigationItem link='/orders'>Orders</NavigationItem>
-                    :   null
+                    ?
+                        <React.Fragment>
+                            <NavigationItem link='/orders'>Orders</NavigationItem>
+                            <NavigationItem link='/logout'>Logout</NavigationItem>
+                        </React.Fragment>
+                    :   <NavigationItem link='/auth'>Authenticate</NavigationItem>
             }
-           {
-               !props.isAuth
-                   ? <NavigationItem link='/auth'>Authenticate</NavigationItem>
-                   : <NavigationItem link='/logout'>Logout</NavigationItem>
-           }
         </ul>
     )
 };

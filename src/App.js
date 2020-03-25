@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
-import {Redirect, Route, Switch, withRouter} from 'react-router-dom';
+import {Redirect, Router, Route, Switch, withRouter} from 'react-router-dom';
+import { AnimatedSwitch, AnimatedRoute } from 'react-router-transition';
 
 import Layout from "./hoc/Layout/Layout";
 import BurgerBuilder from "./containers/BurgerBuilder/BurgerBuilder";
@@ -24,14 +25,44 @@ function App (props) {
     );
     if (isAuth) {
         routs = (
-            <Switch>
-                <Route path='/checkout' component={asyncCheckout}/>
-                <Route path='/orders' component={asyncOrders}/>
-                <Route path='/logout' component={Logout}/>
-                <Route path='/auth' component={asyncAuth}/>
-                <Route path='/' exact component={BurgerBuilder} />
+            <AnimatedSwitch
+                atEnter={{ opacity: 0 }}
+                atLeave={{ opacity: 0 }}
+                atActive={{ opacity: 1 }}
+                className="switch-wrapper"
+            >
+                <AnimatedRoute  atEnter={{ offset: -100 }}
+                                atLeave={{ offset: -20 }}
+                                atActive={{ offset: 0 }}
+                                mapStyles={(styles) => ({
+                                    transform: `translateX(${styles.offset}%)`,
+                                })} path='/checkout' component={asyncCheckout}/>
+                <AnimatedRoute  atEnter={{ offset: -100 }}
+                                atLeave={{ offset: -20 }}
+                                atActive={{ offset: 0 }}
+                                mapStyles={(styles) => ({
+                                    transform: `translateX(${styles.offset}%)`,
+                                })} path='/orders' component={asyncOrders}/>
+                <AnimatedRoute  atEnter={{ offset: -100 }}
+                                atLeave={{ offset: -20 }}
+                                atActive={{ offset: 0 }}
+                                mapStyles={(styles) => ({
+                                    transform: `translateX(${styles.offset}%)`,
+                                })} path='/logout' component={Logout}/>
+                <AnimatedRoute  atEnter={{ offset: -100 }}
+                                atLeave={{ offset: -20 }}
+                                atActive={{ offset: 0 }}
+                                mapStyles={(styles) => ({
+                                    transform: `translateX(${styles.offset}%)`,
+                                })} path='/auth' component={asyncAuth}/>
+                <AnimatedRoute  atEnter={{ offset: -100 }}
+                                atLeave={{ offset: -20 }}
+                                atActive={{ offset: 0 }}
+                                mapStyles={(styles) => ({
+                                    transform: `translateX(${styles.offset}%)`,
+                                })} path='/' exact component={BurgerBuilder} />
                 <Redirect to='/'/>
-            </Switch>
+            </AnimatedSwitch>
         )
     }
 

@@ -2,7 +2,6 @@ import React from 'react';
 
 import classes from './NavigationItems.module.css';
 import NavigationItem from "./NavigationItem/NavigationItem";
-import {ReactReduxContext} from "react-redux";
 
 const NavigationItems = (props) => {
     return (

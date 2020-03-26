@@ -35,7 +35,7 @@ function App (props) {
         )
     }
 
-    useEffect(() => { onTrySignup()} , []);
+    useEffect(() => { onTrySignup()} , [onTrySignup]);
 
     return (
         <div>
